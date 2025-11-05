@@ -17,20 +17,8 @@ def init_excel():
         ws.append(["Name", "Email", "Phone", "Message"])
         wb.save(EXCEL_FILE)
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def home():
-    return render_template("home.html")
-
-@app.route("/about")
-def about():
-    return render_template("about.html")
-
-@app.route("/contact")
-def contact():
-    return render_template("contact.html")
-
-@app.route("/form", methods=["GET", "POST"])
-def form():
     message = None
     if request.method == "POST":
         # Get form data
@@ -49,7 +37,15 @@ def form():
         except Exception as e:
             message = f"Error saving data: {str(e)}"
     
-    return render_template("form.html", message=message)
+    return render_template("home.html", message=message)
+
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
 
 if __name__ == "__main__":
     init_excel()  # Create Excel file on startup
