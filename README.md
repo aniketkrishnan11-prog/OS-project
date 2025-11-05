@@ -1,6 +1,6 @@
 # Dockerized Flask Web App - OS Mini Project
 
-This project is a static Flask-based web application demonstrating the **Implementation of Linux Containers using Docker**. It was created as part of the course **Operating Systems (BCSE303P)**, under the guidance of **Prof. Yogesh C**.
+This project is a static Flask-based web application demonstrating the **Implementation of Linux Containers using Docker**. It was created as part of the course **Operating Systems (BCSE303L)**, under the guidance of **Dr. Manju G**.
 
 The application includes:
 
